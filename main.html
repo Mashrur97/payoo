@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+    
+        <header class="mx-6">
+            <nav class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                 <img src="assets/Group.png" alt="">
+                 <div>
+                    <h1 class="text-3xl font-bold">$ <span id="teka">4500</span></h1>
+                    <p class="border rounded-md p-1 font-semibold">available balance</p>                    
+                 </div>
+                </div>
+                <div>
+                 <button class="btn">Logout</button>
+                </div>
+            </nav>
+           <section class="mt-10">
+           <h1 class="font-bold text-2xl mb-2">Welcome to payoo!!!</h1>
+           <p>Enjoy easyt and convinient financial services with us. Cashout charge is low and</p>
+
+           <div class="grid grid-cols-3 gap-2">
+
+            <div id="addbox" class="box border rounded-md text-center p-4 cursor-pointer">
+                <img src="assets/wallet1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold ">Add money</h3>
+            </div>
+            <div id="cashbox" class="box border rounded-md text-center p-4">
+                <img src="assets/money1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold">Cashout</h3>
+            </div>
+            <div class="box border rounded-md text-center p-4">
+                <img src="assets/bonus1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold">Pay bill</h3>
+            </div>
+            <div id="t" class="box border rounded-md text-center p-4">
+                <img src="assets/purse1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold">Transaction History</h3>
+            </div>
+            <div class="box border rounded-md text-center p-4">
+                <img src="assets/purse1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold">Get bonus</h3>
+            </div>
+            <div class="box border rounded-md text-center p-4">
+                <img src="assets/purse1.png" alt="" class="mx-auto">
+                <h3 class="font-semibold">Transfer Money</h3>
+            </div>
+      
+
+           </div>
+         </section>
+
+          <section id="addM">
+            <h1 class="mt-5 text-2xl text-blue-500 font-semibold">Add money</h1>
+
+            <div class="">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <form class="card-body">
+                       
+                      <fieldset class="fieldset">
+                        <label class="fieldset-label">Select bank</label>
+                         <select class="select">
+                            <option disabled selected>Pick a bank</option>
+                            <option value="bkash">Bkash</option>
+                            <option value="nagad">Nagad</option>
+                            <option value="dbbl">DBBL</option>
+                          </select>
+                        
+                        <label class="fieldset-label">Amount</label>
+                        <input id="amount" type="number" class="input" placeholder="type amount" required/>
+                        <label class="fieldset-label">Account number</label>
+                        <input id="acn" type="number" class="input" placeholder="Type your AC. No. (11 Digits)" required/>
+                        <label class="fieldset-label">Pin</label>
+                        <input id="acpin" type="text" class="input" placeholder="Type your pin" required/>
+                        <div><a class="link link-hover">Forgot pin?</a></div>
+                        <button class="btn btn-neutral mt-4 bg-blue-600 border-none" id="addmoney">Add money</button>
+                      </fieldset>
+                    </form>
+                  </div>
+                </div>
+              </div>
+           </section>
+
+           <section id="cashout">
+ <h1 class="mt-5 text-2xl text-blue-500 font-semibold">Cash out</h1>
+ <div class="hero-content flex-col lg:flex-row-reverse">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+      <form class="card-body">
+         
+        <fieldset class="fieldset">
+          <label class="fieldset-label">Amount</label>
+          <input id="C-amount" type="number" class="input" placeholder="type amount" required/>
+          <label class="fieldset-label">Account number</label>
+          <input id="C-acn" type="number" class="input" placeholder="Type your AC. No. (11 Digits)" required/>
+          <label class="fieldset-label">Pin</label>
+          <input id="C-acpin" type="text" class="input" placeholder="Type your pin" required/>
+          <div><a class="link link-hover">Forgot pin?</a></div>
+          <button class="btn btn-neutral mt-4 bg-blue-600 border-none" id="cashbtn">Cashout</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+           </section>
+
+<section id="tbox">
+  <h1 class="mt-5 text-2xl text-red-500 font-semibold text-center">Transaction history</h>
+</section>
+        </header>
+    </section>
+    <script src="utilities.js"></script>
+    <script src="addmoney.js"></script>
+    <script src="toggle.js"></script>
+    <script src="cash.js"></script>
+</body>
+</html>
