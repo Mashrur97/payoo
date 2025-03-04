@@ -9,6 +9,19 @@ const mbalance = parseFloat(document.getElementById("teka").innerText);
 if(pin && amount){
     if(pin === 1234){
     document.getElementById("teka").innerText = (mbalance-amount);
+
+        const div = document.createElement("div");
+
+        const formattedDate = new Date().toLocaleString();
+        div.innerHTML = `
+        
+        <p>Added ${amount} from ${document.getElementById("acn").value} at ${formattedDate}</p>
+
+        `;
+
+        
+        const x = document.getElementById("tbox");
+        x.appendChild(div);
     }else{
         alert("wrong pin vau");
     }
